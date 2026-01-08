@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+@font-face {
+  font-family: Segoe; /* set name */
+  src: url(./assets/segoepr.ttf); /* url of the font */
+}
+@font-face {
+  font-family: Flavors; /* set name */
+  src: url(./assets/Flavors-Regular.ttf); /* url of the font */
+}
+
+$color-dark: #301B18;
+$color-light: #F5CCA7;
+$color-main: #E25777;
+$color-secondary: #BCC35E;
+$color-tertiary: #602347;
+
+body{
+    margin: 0;
+    background: #FFE3C9;
+    font-family: Segoe;
+    font-family: "Special Elite";
+    // font-family: "Redacted Script", cursive;
+    color: $color-tertiary;
+}
+
+main{
+    padding-bottom: 50px;
+}
+
+p{
+    font-size: 1em;
+    line-height: 1.2em;
+    overflow-wrap: break-word;
+}
+::selection {
+    color: white;
+    background-color: $color-main;
+}
+
+h1{
+    font-family: Flavors;
+    font-weight: 300;
+    font-size: 4em;
+}
+
+h1, h2, h3, h4{
+    color: $color-tertiary;
+}
+
+a{
+    // font-size: 1.4em;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+figure{
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+}
+
+audio{
+    border-radius: 10px;
+}
+
+em {
+    font-size: 0.9em;
+    font-weight: 600;
+}
+img{
+    width: 100%;
+}
+
+.text{
+    width: 95%;
+    // margin: 0 auto;
+}
+
+.sidebar {
+    background: $color-dark;
+    width: 100vh;
+    height: 10%;
+    transform-origin: top left;
+    position: fixed;
+    left: 0;
+    top: 100%;
+    transform: rotate(-90deg);
+    display: flex;
+    justify-content: start;
+}
+.sidebar div{
+    background-color: $color-main;
+    padding: 0px 15px;
+    border-radius: 15px 15px 0 0;
+    border: $color-tertiary 5px dashed;
+    display: flex;
+    align-items: center;
+}
+.sidebar p{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.body-text {
+    width: 90%;
+    margin: 0;
+    margin-left: 5%;
+    padding-left: 60px;
+    font-size: 18px;
+}
+
+.top-banner{
+    margin: 0;
+    position: relative;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    // margin: 0 auto;
+}
+
+.title-thing{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+.stickers-thing{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.sticker{
+    background-color: $color-main;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    border: solid white 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 700;
+    p{
+        margin: 0;
+        text-align: center;
+        line-height: 1em;
+        width: 100%;
+    }
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    >div{
+        width: 30%;
+    }
+}
+
+.blocks{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 10px;
+    row-gap: 15px;
+    >div{
+        background-color: $color-main;
+        border-radius: 5px;
+        padding: 20px;
+        color: white;
+        h3{
+            color: white;
+        }
+    }
+    >div:nth-child(even){
+        background-color: $color-secondary;
+        color: $color-tertiary;
+        h3{
+            color: $color-tertiary;
+        }
+    }
+    img{
+        border-radius: 5px;
+    }
+}
+
+.img-mid{
+    width: 60% !important;
+    margin: 0 auto;
+    img{
+        border-radius: 10px;
+    }
+}
+
+.img-small{
+    width: 20%;
+    margin: 0 auto;
+    img{
+        border-radius: 10px;
+    }
+}
+
+@media (width <= 900px) {
+.body-text{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.title-thing{
+    flex-direction: column;
+    align-items: start;
+}
+
+.stickers-thing{
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.sticker{
+    width: 75px;
+    height: 75px;
+    p{
+        font-size: 1em;
+    }
+}
+
+.blocks{
+    grid-template-columns: 90%;
+}
+
+}
